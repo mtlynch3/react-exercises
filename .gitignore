@@ -1,0 +1,23 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+forms-events/node_modules
+forms-events/.pnp
+forms-events/.pnp.js
+
+# testing
+forms-events/coverage
+
+# production
+forms-events/build
+
+# misc
+forms-events/.DS_Store
+forms-events/.env.local
+forms-events/.env.development.local
+forms-events/.env.test.local
+forms-events/.env.production.local
+
+forms-events/npm-debug.log*
+forms-events/yarn-debug.log*
+forms-events/yarn-error.log*
