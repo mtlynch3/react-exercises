@@ -1,7 +1,6 @@
 import React,{Component} from 'react';
 import './App.css';
 
-
 class FormComponent extends Component {
   constructor(){
     super();
@@ -36,20 +35,34 @@ class FormComponent extends Component {
 }
 
 class FolderComponent extends Component {
+  constructor(){
+    super();
+    this.state = {
+      showlist: true 
+    }
+  }
   handleToggleClick = () => {
+    this.setState({showlist: !this.state.showlist})
 
   }
   render(){
-    return <div className="folder-container">
-      <h1>Home</h1>
-      <ul>
-        <li>File 1</li>
-        <li>File 2</li>
-        <li>File 3</li>
-      </ul>
-      <button id="toggle-button" onClick={this.handleToggleClick}>Toggle</button>
+    if(this.state.showlist){
+      return <div className="folder-container">
+        <h1>Home</h1>
+        <button id="toggle-button" onClick={this.handleToggleClick}>Toggle</button>
+        <ul>
+          <li>File 1</li>
+          <li>File 2</li>
+          <li>File 3</li>
+        </ul>
 
-    </div>
+      </div>
+    } else {
+        return <div className="folder-container">
+        <h1>Home</h1>
+        <button id="toggle-button" onClick={this.handleToggleClick}>Toggle</button>
+      </div>
+    }
   }
 }
 
