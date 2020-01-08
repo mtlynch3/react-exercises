@@ -3,18 +3,21 @@ import './App.css';
 
 
 class FormComponent extends Component {
+  handleEditClick = () =>{
+    
+  }
   render(){
     return <div className="form-container">
       <div className="firstname">First Name:</div>
       <div className="lastname">Last Name:</div>
-      <button id="edit-button">Edit</button>
+      <button id="edit-button" onClick={this.handleEditClick}>Edit</button>
       </div>
   }
 }
 
 class FolderComponent extends Component {
-  handleEditClick(){
-    
+  handleToggleClick = () => {
+
   }
   render(){
     return <div className="folder-container">
@@ -24,7 +27,7 @@ class FolderComponent extends Component {
         <li>File 2</li>
         <li>File 3</li>
       </ul>
-      <button id="toggle-button" onClick={this.handleEditClick}>Toggle</button>
+      <button id="toggle-button" onClick={this.handleToggleClick}>Toggle</button>
 
     </div>
   }
