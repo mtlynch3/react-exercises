@@ -1,24 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
+import React,{Component} from 'react';
 import './App.css';
+
+
+class FormComponent extends Component {
+  render(){
+    return <div className="form-container">
+      <div className="firstname">First Name:</div>
+      <div className="lastname">Last Name:</div>
+      <button id="edit-button">Edit</button>
+      </div>
+  }
+}
+
+class FolderComponent extends Component {
+  handleEditClick(){
+    
+  }
+  render(){
+    return <div className="folder-container">
+      <h1>Home</h1>
+      <ul>
+        <li>File 1</li>
+        <li>File 2</li>
+        <li>File 3</li>
+      </ul>
+      <button id="toggle-button" onClick={this.handleEditClick}>Toggle</button>
+
+    </div>
+  }
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <FormComponent />
+    <FolderComponent />
     </div>
   );
 }
