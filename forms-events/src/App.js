@@ -28,6 +28,7 @@ class FormComponent extends Component {
     this.setState({lastname: event.target.value})
   }
 
+  
   render(){
     if(this.state.showform){
       return <div className="edit-form-container">
